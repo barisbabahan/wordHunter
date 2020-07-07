@@ -4,6 +4,7 @@ const leftTimeTxt = document.querySelector(".timer");
 let leftHealth = document.querySelector(".leftHealth");
 let score = document.querySelector(".score");
 const startBtn = document.querySelector(".start");
+const keyCode = document.querySelector(".keycode");
 let context = canvas.getContext("2d");
 let leftTime = 60;
 const words = [
@@ -28,7 +29,6 @@ const words = [
   "ask",
   "anne",
   "kardes",
-  "ikirciklenmek",
   "haz",
   "etmek",
   "yavru",
@@ -110,6 +110,7 @@ input.addEventListener("keypress", (e) => {
     isInputMatchWithArr(inputValue.toLowerCase());
     input.value = "";
   }
+  keyCode.textContent = e.keyCode.toString();
 });
 // Plan B for all phones
 // if (ifSpaceEntered(inputValue)) {
