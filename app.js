@@ -47,7 +47,7 @@ const words = [
 ];
 let currentUsingWords = [];
 let indexesOfWords = [];
-context.font = "10px Comic Sans MS";
+context.font = "16px Arial";
 let createWordInterval;
 let updateGameAreaInterval;
 let timerInterval;
@@ -86,7 +86,7 @@ function updateGameArea() {
 }
 
 function createWord() {
-  const randomX = Math.floor(Math.random() * 150);
+  const randomX = Math.floor(Math.random() * 130);
   const randomNum = Math.floor(Math.random() * words.length);
   const randomWord = words[randomNum];
   if (currentUsingWords.length === 0 && indexesOfWords.length === 0) {
@@ -105,12 +105,23 @@ function createWord() {
 }
 
 input.addEventListener("keypress", (e) => {
-  if (e.keyCode === 32) {
+  if (e.keyCode === 32 || e.keyCode === 62) {
     inputValue = input.value.trim();
-    isInputMatchWithArr(inputValue);
+    isInputMatchWithArr(inputValue.toLowerCase());
     input.value = "";
   }
 });
+// Plan B for all phones
+// if (ifSpaceEntered(inputValue)) {
+//   console.log("sildi");
+//   isInputMatchWithArr(inputValue.trim());
+//   input.value = "";
+// }
+// function ifSpaceEntered(word) {
+//   if (/\s/.test(word)) {
+//     return true;
+//   }
+// }
 
 function isInputMatchWithArr(inputValue) {
   currentUsingWords.forEach((wordObj) => {
