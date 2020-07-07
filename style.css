@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.btns {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btns input {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+.btns button {
+  padding: 5px 30px;
+  font-size: 1.5rem;
+}
+
+#myCanvas {
+  width: 95vw;
+  height: 400px;
+  border: 2px solid #000;
+  padding: 2;
+}
+.timer {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.items {
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info-text {
+  width: 100vw;
+  height: 20px;
+  margin: 20px 0;
+}
+.items .health {
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+}
+.items .score {
+  position: absolute;
+  left: 50%;
+  font-size: 1.5rem;
+}

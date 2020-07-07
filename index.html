@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Hunter App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="items">
+        <div class="info-text">
+          <span class="health"
+            >Health: <span class="leftHealth"> 5 </span>
+          </span>
+          <span class="score">0</span>
+        </div>
+        <canvas id="myCanvas" width="200" height="200"></canvas>
+        <div class="timer">1:00</div>
+        <div class="btns">
+          <input type="text" />
+          <button type="submit" class="start" onclick="startGame()">
+            Start
+          </button>
+          <button type="submit" onclick="restartGame()">Restart</button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
