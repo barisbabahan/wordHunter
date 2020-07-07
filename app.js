@@ -5,6 +5,7 @@ let leftHealth = document.querySelector(".leftHealth");
 let score = document.querySelector(".score");
 const startBtn = document.querySelector(".start");
 const keyCode = document.querySelector(".keycode");
+const keyCode2 = document.querySelector(".keycode2");
 let context = canvas.getContext("2d");
 let leftTime = 60;
 const words = [
@@ -104,13 +105,17 @@ function createWord() {
   }
 }
 
-input.addEventListener("keypress", (e) => {
+input.addEventListener("keyup", (e) => {
   if (e.keyCode === 32 || e.keyCode === 62) {
     inputValue = input.value.trim();
     isInputMatchWithArr(inputValue.toLowerCase());
     input.value = "";
   }
-  keyCode.textContent = e.keyCode.toString();
+  keyCode.textContent = e.keyCode;
+});
+$("input").on("textInput", (e) => {
+  keyCode2.textContent = e.originalEvent.data.charCodeAt(0);
+  console.log(keyCode2.textContent);
 });
 // Plan B for all phones
 // if (ifSpaceEntered(inputValue)) {
