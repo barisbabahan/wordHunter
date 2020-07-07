@@ -104,9 +104,9 @@ function createWord() {
 }
 
 $("input").on("textInput", (e) => {
-  keyCode2.textContent = e.originalEvent.data.charCodeAt(0);
-  if (keyCode2.textContent === "32") {
-    inputValue = input.value.trim();
+  inputValueKeyCode = e.originalEvent.data.charCodeAt(0);
+  if (inputValueKeyCode === 32) {
+    const inputValue = input.value.trim();
     isInputMatchWithArr(inputValue.toLowerCase());
     input.value = "";
   }
